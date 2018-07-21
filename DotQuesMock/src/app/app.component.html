@@ -1,49 +1,182 @@
 <!---Actual Design starts now-->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark  fixed-top navbar-custom">
   <a class="navbar-brand" href="#">DotQuesMock</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
       <li class="nav-item">
-          <a class="nav-link" href="#">Interview Questions</a>
+        <a class="nav-link" href="#">Interview Questions</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">Articles</a>
+        <a class="nav-link" href="#">Articles</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Tutorials</a>
-    </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">Tools</a>
       </li>
-  </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tools</a>
+      </li>
+    </ul>
   </div>
 </nav>
 <main role="main" class="container">
 
- <!--Banner Ad-->
- <div class="row">
+  <!--Banner Ad-->
+  <div class="row">
     <div class="col-md-8 col-sm-12 col-xs-12">
-        <img src="http://via.placeholder.com/728x90" class="img-fluid" /> 
+      <img src="http://via.placeholder.com/728x90" class="img-fluid" />
     </div>
- </div>
-<!--Banner Ad-->
+  </div>
+  <!--Banner Ad-->
+  <br/>
+  <!--Article Section-->
+  <div class="row">
+    <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
 
-<!--Article Section-->
-<div class="row">
-  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-    <div>
-      <ngx-datatable [rows]="rows" [columns]="columns" class="material">
+      <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="force" [headerHeight]="0"
+        [footerHeight]="50" [rowHeight]="'auto'" [reorderable]="reorderable">
+        <ngx-datatable-column name="Name" [width]="auto">
+          <ng-template let-row="row" ngx-datatable-cell-template>
+            <h2 class="article-header">{{row.name}}</h2> <br> {{row.desc}}
+            <!-- <div>Total Views:{{row.totalViews}}</div> -->
+            <!-- <button class="btn btn-sm btn-info float-right">Readmore</button> -->
+            <br>
+            <span class="featured-more">
+              <a href="#">Read More</a>
+            </span>
+          </ng-template>
+        </ngx-datatable-column>
       </ngx-datatable>
+
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+
+            <div class="card-body">
+              <img src="http://via.placeholder.com/300x600" class="img-fluid" />
+            </div>
+          </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-header text-white text-center label-sidebar">Tags</div>
+            <div class="card-body">
+              <div>
+                <ul>
+                  <li>
+                    <a href="/CategoryDetails/1">.NET FAQS</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/2">MVC</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/3">WCF</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/4">MS CRM</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/5">WPF</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/6">SQL SERVER DBA</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/7">C#</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/8">SQL SERVER</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/9">HTML5</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/10">ANGULARJS</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/15">JQuery</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/21">MCQ</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/22">ASP.NET</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/24">Oracle Apps</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/25">Crystal Reports</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/26">Java Script</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/27">Threads</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/28">WebServices</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/29">IIS</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/30">SSRS</a>
+                  </li>
+                  <li>
+                    <a href="/CategoryDetails/31">Web API</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-header text-white text-center label-sidebar">Facebook</div>
+        <div class="card-body">
+          <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/pages/Dotnetqueries/603387939771930" data-width=""
+            data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"
+            data-show-posts="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=756864531061018&amp;container_width=246&amp;height=200&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FDotnetqueries%2F603387939771930&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;small_header=true">
+            <span style="vertical-align: bottom; width: 246px; height: 200px;">
+              <iframe name="fde26fa08f5244" width="1000px" height="200px" frameborder="0" allowtransparency="true" allowfullscreen="true"
+                scrolling="no" allow="encrypted-media" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.4/plugins/page.php?adapt_container_width=true&amp;app_id=756864531061018&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FbSTT5dUx9MY.js%3Fversion%3D42%23cb%3Df74c3e309a937%26domain%3Dwww.dotnetqueries.com%26origin%3Dhttp%253A%252F%252Fwww.dotnetqueries.com%252Ff4c7625c3937c%26relation%3Dparent.parent&amp;container_width=246&amp;height=200&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FDotnetqueries%2F603387939771930&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;small_header=true"
+                style="border: none; visibility: visible; width: 246px; height: 200px;" __idm_frm__="159" class=""></iframe>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-header text-white text-center label-sidebar">Subscribe</div>
+        <div class="card-body">
+          <form style="border:1px solid #ccc;padding:3px;text-align:center;" action="https://feedburner.google.com/fb/a/mailverify"
+            method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=dotnetqueries/emCl', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+            <p style="color:cornflowerblue;">Receive Quality Tutorials Straight in your Inbox by submitting your Email below:</p>
+            <p>
+              <input type="text" style="width:180px" name="email">
+            </p>
+            <input type="hidden" value="dotnetqueries/emCl" name="uri">
+            <input type="hidden" name="loc" value="en_US">
+            <input type="submit" value="Subscribe">
+            <p>Delivered by
+              <a href="https://feedburner.google.com" target="_blank">FeedBurner</a>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="card shadow p-3 mb-5 bg-white rounded">
+        <div class="card-body">
+          <a href="http://www.copyscape.com/duplicate-content/">
+            <img src="http://banners.copyscape.com/images/cs-wh-120x60.gif" alt="Protected by Copyscape Duplicate Content Checker"
+              title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." width="120" height="60"
+              border="0">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+  <!--Article Section-->
 
-  </div>
-</div>
-<!--Article Section-->
-
-</main><!-- /.container -->
+</main>
+<!-- /.container -->
