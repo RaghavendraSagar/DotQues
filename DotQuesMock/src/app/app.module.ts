@@ -6,9 +6,10 @@ import { LoginComponent } from './admin/login/login.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './user/home/home.component';
 import { Login } from './admin/models/login.model';
-import {ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ArticleComponent } from './admin/article/article.component';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { ArticleComponent } from './admin/article/article.component';
     BrowserModule,
     NgxDatatableModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    CKEditorModule
   ],
   providers: [Login],
   bootstrap: [AppComponent]
