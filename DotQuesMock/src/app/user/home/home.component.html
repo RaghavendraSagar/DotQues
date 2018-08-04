@@ -1,0 +1,166 @@
+<main role="main" class="container">
+
+    <!--Banner Ad-->
+    <div class="row">
+      <div class="col-md-8 col-sm-12 col-xs-12">
+        <img src="http://via.placeholder.com/728x90" class="img-fluid" />
+      </div>
+    </div>
+    <!--Banner Ad-->
+    <br/>
+    <!--Article Section-->
+    <div class="row">
+      <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+  
+        <ngx-datatable class="material" [rows]="rows" [loadingIndicator]="loadingIndicator" [columnMode]="force" [headerHeight]="0"
+          [footerHeight]="50" [rowHeight]="'auto'" [reorderable]="reorderable">
+          <ngx-datatable-column name="Name" [width]="auto">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+              <h2 class="article-header">{{row.name}}</h2> <br> {{row.desc}}
+              <!-- <div>Total Views:{{row.totalViews}}</div> -->
+              <!-- <button class="btn btn-sm btn-info float-right">Readmore</button> -->
+              <br>
+              <div>
+                  <span class="featured-more">
+                    <a class="" href="#">Read More</a>
+                  </span>
+                  <span class="col-sm-4"></span>
+                  <span class="share-post">
+                    Share on 
+                  </span>
+              </div>
+            </ng-template>
+          </ngx-datatable-column>
+        </ngx-datatable>
+  
+      </div>
+      <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+  
+          <div class="card shadow p-3 mb-5 bg-white rounded ">
+  
+              <div class="card-body">
+                <img src="http://via.placeholder.com/300x600" class="img-fluid" />
+              </div>
+            </div>
+          <div class="card  p-3 mb-5 bg-white rounded border-0">
+              <div class="card-header text-white text-center label-sidebar">Tags</div>
+              <div class="card-body">
+                <div class="label-widget">
+                  <span class="label">
+                      <a href="#">Net</a>
+                  </span>
+                  
+          
+                    <span class="label">
+                      <a href="/CategoryDetails/1">.NET FAQS</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/2">MVC</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/3">WCF</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/4">MS CRM</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/5">WPF</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/6">SQL SERVER DBA</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/7">C#</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/8">SQL SERVER</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/9">HTML5</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/10">ANGULARJS</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/15">JQuery</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/21">MCQ</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/22">ASP.NET</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/24">Oracle Apps</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/25">Crystal Reports</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/26">Java Script</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/27">Threads</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/28">WebServices</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/29">IIS</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/30">SSRS</a>
+                    </span>
+                    <span class="label">
+                      <a href="/CategoryDetails/31">Web API</a>
+                    </span>
+             
+                
+                </div>
+              </div>
+          </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="card-header text-white text-center label-sidebar">Facebook</div>
+          <div class="card-body">
+              <!---Facebook-->
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+               <!---Facebook-->
+            </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded border-0">
+            <div class="card-header text-white text-center label-sidebar">Newsletter</div>
+          <div class="card-body">
+            <!-- <form style="text-align:center;" action="https://feedburner.google.com/fb/a/mailverify"
+              method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=dotnetqueries/emCl', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"> -->
+              <!-- <p style="color:cornflowerblue;">Receive Quality Tutorials Straight in your Inbox by submitting your Email below:</p> -->
+              <!-- <p>
+                <input type="text" placeholder="Enter your email.." class="col-sm-12 form-control" name="email">
+              </p> -->
+              
+              <!-- <input type="hidden" value="dotnetqueries/emCl" name="uri">
+              <input type="hidden" name="loc" value="en_US">
+              <input type="submit" class="btn col-sm-12 orgCol"  value="Subscribe Now"> -->
+              <!-- <p>Delivered by
+                <a href="https://feedburner.google.com" target="_blank">FeedBurner</a>
+              </p> -->
+            <!-- </form> -->
+          </div>
+        </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+          <div class="card-body">
+            <a href="http://www.copyscape.com/duplicate-content/">
+              <img src="http://banners.copyscape.com/images/cs-wh-120x60.gif" alt="Protected by Copyscape Duplicate Content Checker"
+                title="Protected by Copyscape Plagiarism Checker - Do not copy content from this page." width="120" height="60"
+                border="0">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Article Section-->
+    <div class="fb-page" 
+    data-href="https://www.facebook.com/facebook"
+    data-width="380" 
+    data-hide-cover="false"
+    data-show-facepile="false"></div>
+  </main>
