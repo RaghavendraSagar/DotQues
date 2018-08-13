@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from '../models/article.model'
-import {FormsModule} from '@angular/forms';
+import { FormBuilder,Validators  } from '@angular/forms';
+
 
 @Component({
   selector: 'app-article',
@@ -9,13 +9,26 @@ import {FormsModule} from '@angular/forms';
 })
 export class ArticleComponent implements OnInit {
 
-  ckeditorContent: string = '<p>Some html</p>';
-  articleList : Article[];
+  // ckeditorContent: string = '<p>Some html</p>';
+ 
+  constructor(private fb:FormBuilder) { }
+
+  articleForm = this.fb.group({
+      articleID:[''],
+      articleTitle:['',Validators.required],
+      articleContent:['',Validators.required],
+      
+  })
 
   
-  constructor() { }
 
   ngOnInit() {
   }
 
+
+  submitArticle(){
+    debugger;
+    console.log(this.articleForm.value);
+    alert('form submitted');
+  }
 }

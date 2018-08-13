@@ -1,5 +1,7 @@
 export class Article {
-    public articleId : number;
+    public articleID : number;
+    public categoryID:number;
+    public articleSeqNumber:number;
     public articleTitle : string;
     public articleContent :string;
     public postedDate : string;

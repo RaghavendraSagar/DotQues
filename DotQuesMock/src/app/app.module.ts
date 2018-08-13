@@ -10,7 +10,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ArticleComponent } from './admin/article/article.component';
 import { CKEditorModule } from 'ng2-ckeditor';
-
+import { ArticleListComponent } from './admin/article-list/article-list.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {      
+  MatButtonModule,      
+  MatMenuModule,      
+  MatToolbarModule,      
+  MatIconModule,      
+  MatCardModule,      
+  MatFormFieldModule,      
+  MatInputModule,      
+  MatDatepickerModule,      
+  MatDatepicker,      
+  MatNativeDateModule,      
+  MatRadioModule,      
+  MatSelectModule,      
+  MatOptionModule,      
+  MatSlideToggleModule,ErrorStateMatcher,ShowOnDirtyErrorStateMatcher      
+} from '@angular/material'; 
 
 @NgModule({
   declarations: [
@@ -18,7 +35,8 @@ import { CKEditorModule } from 'ng2-ckeditor';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    ArticleComponent
+    ArticleComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +44,37 @@ import { CKEditorModule } from 'ng2-ckeditor';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    CKEditorModule
+    CKEditorModule,BrowserAnimationsModule,
+    MatButtonModule,      
+    MatMenuModule,      
+    MatToolbarModule,      
+    MatIconModule,      
+    MatCardModule,      
+    BrowserAnimationsModule,      
+    MatFormFieldModule,      
+    MatInputModule,      
+    MatDatepickerModule,      
+    MatNativeDateModule,      
+    MatRadioModule,      
+    MatSelectModule,      
+    MatOptionModule,      
+    MatSlideToggleModule
+  ],
+  exports:[
+    BrowserAnimationsModule,
+    MatButtonModule,      
+    MatMenuModule,      
+    MatToolbarModule,      
+    MatIconModule,      
+    MatCardModule,      
+    MatFormFieldModule,      
+    MatInputModule,      
+    MatDatepickerModule,      
+    MatNativeDateModule,      
+    MatRadioModule,      
+    MatSelectModule,      
+    MatOptionModule,      
+    MatSlideToggleModule     
   ],
   providers: [Login],
   bootstrap: [AppComponent]
